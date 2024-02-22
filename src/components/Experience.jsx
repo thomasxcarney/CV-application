@@ -1,6 +1,6 @@
 function ExperienceSection() {
     return (
-        <div>
+        <div id='experience'>
             <form>
                 <p>
                     <label for='company-name'>
@@ -26,6 +26,8 @@ function ExperienceSection() {
                     </label>
                     <input type='date' id='start-date'></input>
                 </p>
+                <button type='submit'>Submit</button>
+                <button type='button'>Edit</button>
             </form>
         </div>
     )

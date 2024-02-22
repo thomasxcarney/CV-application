@@ -20,6 +20,8 @@ function EducationSection() {
                     </label>
                     <input type='date' id='date-of-study'></input>
                 </p>
+                <button type='submit'>Submit</button>
+                <button type='button'>Edit</button>
             </form>
         </div>
     )

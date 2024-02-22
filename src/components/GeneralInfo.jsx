@@ -1,6 +1,6 @@
 function GeneralInfoSection() {
     return (
-        <div>
+        <div id='general-info'>
             <form>
                 <p>
                     <label for='name'>
@@ -20,6 +20,8 @@ function GeneralInfoSection() {
                     </label>
                     <input type='tel' id='phone-number'></input>
                 </p>
+                <button type='submit'>Submit</button>
+                <button type='button'>Edit</button>
             </form>
         </div>
     )
