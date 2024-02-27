@@ -16,3 +16,8 @@ input {
   padding: 5px;
   margin: 5px;
 }
+
+button {
+    padding: 2.5px;
+    margin: 2.5px;
+}

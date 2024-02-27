@@ -12,6 +12,12 @@ function EducationSection() {
         return;
     };
 
+    function handleEdit(e) {
+        e.preventDefault();
+        setSubmit(false);
+        return;
+    }
+
     if(!submit){return (
         <div id="education">
         <form onSubmit={handleSubmit}>
@@ -40,12 +46,11 @@ function EducationSection() {
             ></input>
             </p>
             <button type="submit">Submit</button>
-            <button type="button">Edit</button>
         </form>
         </div>
     )} else return (
         <div id="education">
-        <form onSubmit={handleSubmit}>
+        <form>
             <p>
                 {school}
             </p>
@@ -55,7 +60,7 @@ function EducationSection() {
             <p>
                 {date}
             </p>
-            <button type="button">Edit</button>
+            <button type="button" onClick={handleEdit}>Edit</button>
         </form>
         </div>
     );
