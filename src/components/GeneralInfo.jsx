@@ -3,19 +3,19 @@ function GeneralInfoSection() {
     <div id="general-info">
       <form>
         <p>
-          <label for="name">
+          <label htmlFor="name">
             <span>Name</span>
           </label>
           <input type="text" id="name"></input>
         </p>
         <p>
-          <label for="email">
+          <label htmlFor="email">
             <span>Email</span>
           </label>
           <input type="email" id="email"></input>
         </p>
         <p>
-          <label for="phone-number">
+          <label htmlFor="phone-number">
             <span>Phone Number</span>
           </label>
           <input type="tel" id="phone-number"></input>

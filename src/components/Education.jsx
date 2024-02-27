@@ -1,30 +1,64 @@
+import { useState } from "react";
+
 function EducationSection() {
-  return (
-    <div>
-      <form>
-        <p>
-          <label for="school-name">
-            <span>School</span>
-          </label>
-          <input type="text" id="school-name"></input>
-        </p>
-        <p>
-          <label for="field-of-study">
-            <span>Field of study</span>
-          </label>
-          <input type="text" id="field-of-study"></input>
-        </p>
-        <p>
-          <label for="date-of-study">
-            <span>Date finished</span>
-          </label>
-          <input type="date" id="date-of-study"></input>
-        </p>
-        <button type="submit">Submit</button>
-        <button type="button">Edit</button>
-      </form>
-    </div>
-  );
+    const [school, setSchool] = useState('');
+    const [fieldOfStudy, setFieldOfStudy] = useState('');
+    const [date, setDate] = useState('');
+    const [submit, setSubmit] = useState(false);
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        setSubmit(true);
+        return;
+    };
+
+    if(!submit){return (
+        <div id="education">
+        <form onSubmit={handleSubmit}>
+            <p>
+            <label htmlFor="school-name">
+                <span>School</span>
+            </label>
+            <input type="text" id="school-name" name="schoolName" value={school}
+              onChange={(e)=> setSchool(e.target.value)}
+            ></input>
+            </p>
+            <p>
+            <label htmlFor="field-of-study">
+                <span>Field of study</span>
+            </label>
+            <input type="text" id="field-of-study" name="fieldOfStudy" value ={fieldOfStudy}
+                onChange={(e)=> setFieldOfStudy(e.target.value)}
+            ></input>
+            </p>
+            <p>
+            <label htmlFor="date-of-study">
+                <span>Date finished</span>
+            </label>
+            <input type="date" id="date-of-study" name="dateOfStudy" value={date}
+                onChange={(e)=> setDate(e.target.value)}
+            ></input>
+            </p>
+            <button type="submit">Submit</button>
+            <button type="button">Edit</button>
+        </form>
+        </div>
+    )} else return (
+        <div id="education">
+        <form onSubmit={handleSubmit}>
+            <p>
+                {school}
+            </p>
+            <p>
+                {fieldOfStudy}
+            </p>
+            <p>
+                {date}
+            </p>
+            <button type="button">Edit</button>
+        </form>
+        </div>
+    );
 }
 
 export default EducationSection;
