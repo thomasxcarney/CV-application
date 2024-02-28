@@ -5,6 +5,7 @@ function ExperienceSection() {
     const [position, setPosition] = useState('');
     const [respon, setRespon] = useState('');
     const [date, setDate] = useState('');
+    const [endDate, setEndDate] = useState('');
     const [submit, setSubmit] = useState(false);
 
     function handleSubmit(e) {
@@ -55,6 +56,14 @@ function ExperienceSection() {
                         onChange={(e)=> setDate(e.target.value)}
                     ></input>
                 </p>
+                <p>
+                    <label htmlFor="end-date">
+                        <span>End date</span>
+                    </label>
+                    <input type="date" id="end-date" name='endDate' value={endDate}
+                        onChange={(e)=> setEndDate(e.target.value)}
+                    ></input>
+                </p>
                 <button type="submit">Submit</button>
             </form>
             </div>
@@ -73,6 +82,9 @@ function ExperienceSection() {
             </p>
             <p>
                 {date}
+            </p>
+            <p>
+                {endDate}
             </p>
             <button type="button" onClick={handleEdit}>Edit</button>
         </form>

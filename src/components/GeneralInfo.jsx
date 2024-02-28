@@ -24,7 +24,7 @@ function GeneralInfoSection() {
             <form onSubmit={handleSubmit}>
                 <p>
                 <label htmlFor="name">
-                    <span>Name</span>
+                    Name
                 </label>
                 <input type="text" id="name" name='name' value={name}
                     onChange={(e)=> setName(e.target.value)}
